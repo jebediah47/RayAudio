@@ -23,6 +23,14 @@ namespace RayAudio {
 			Native.RHStopSound(NativePtr);
 		}
 
+		public void Pause() {
+			Native.RHPauseSound(NativePtr);
+		}
+
+		public void Resume() {
+			Native.RHResumeSound(NativePtr);
+		}
+
 		public void Dispose() {
 			Native.RHUnloadSound(NativePtr);
 		}

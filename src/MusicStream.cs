@@ -23,6 +23,14 @@ namespace RayAudio {
 			Native.RHStopMusicStream(NativePtr);
 		}
 
+		public void Pause() {
+			Native.RHPauseMusicStream(NativePtr);
+		}
+
+		public void Resume() {
+			Native.RHResumeMusicStream(NativePtr);
+		}
+
 		public void Update() {
 			Native.RHUpdateMusicStream(NativePtr);
 		}
