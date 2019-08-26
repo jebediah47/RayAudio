@@ -9,6 +9,18 @@ namespace RayAudio {
 			get; private set;
 		}
 
+		internal static float MasterVolumeCache = 1f;
+
+		public static float MasterVolume {
+			set {
+				MasterVolumeCache = value;
+				Native.SetMasterVolume(value);
+			}
+			get {
+				return MasterVolumeCache;
+			}
+		}
+
 		public static void Initialize() {
 			if (WasClosed) throw new InvalidOperationException("Cannot reinitialize audio device after closing it.");
 			Native.InitAudioDevice();
