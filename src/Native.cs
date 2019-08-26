@@ -64,10 +64,10 @@ namespace RayAudio
 		public static extern void RHPlayMusicStream(UIntPtr music);
 
 		[DllImport("raudio")]
-		public static extern void RHUpdateMusicStream(UIntPtr music);
+		public static extern void UpdateMusicStream(UIntPtr music);
 
 		[DllImport("raudio")]
-		public static extern void RHStopMusicStream(UIntPtr music);
+		public static extern void StopMusicStream(UIntPtr music);
 
 		[DllImport("raudio")]
 		public static extern void RHPauseMusicStream(UIntPtr music);

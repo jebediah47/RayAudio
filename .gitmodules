@@ -1,3 +1,4 @@
 [submodule "raudio-helper/raylib"]
 	path = raudio-helper/raylib
-	url = https://github.com/raysan5/raylib/
+	url = https://github.com/zatherz/raylib
+	branch = music-stream-fix

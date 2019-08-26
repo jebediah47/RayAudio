@@ -33,8 +33,6 @@ Music* RHLoadMusicStream(const char *fileName) {
 
 void RHUnloadMusicStream(Music* music) { UnloadMusicStream(*music); }
 void RHPlayMusicStream(Music* music) { PlayMusicStream(*music); }
-void RHUpdateMusicStream(Music* music) { UpdateMusicStream(*music); }
-void RHStopMusicStream(Music* music) { StopMusicStream(*music); }
 void RHPauseMusicStream(Music* music) { PauseMusicStream(*music); }
 void RHResumeMusicStream(Music* music) { ResumeMusicStream(*music); }
 bool RHIsMusicPlaying(Music* music) { return IsMusicPlaying(*music); }

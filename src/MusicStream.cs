@@ -20,7 +20,7 @@ namespace RayAudio {
 		}
 
 		public void Stop() {
-			Native.RHStopMusicStream(NativePtr);
+			Native.StopMusicStream(NativePtr);
 		}
 
 		public void Pause() {
@@ -32,7 +32,7 @@ namespace RayAudio {
 		}
 
 		public void Update() {
-			Native.RHUpdateMusicStream(NativePtr);
+			Native.UpdateMusicStream(NativePtr);
 		}
 
 		public void Dispose() {
