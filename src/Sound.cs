@@ -19,6 +19,10 @@ namespace RayAudio {
 			Native.RHPlaySound(NativePtr);
 		}
 
+		public void PlayMulti() {
+			Native.RHPlaySoundMulti(NativePtr);
+		}
+
 		public void Stop() {
 			Native.RHStopSound(NativePtr);
 		}

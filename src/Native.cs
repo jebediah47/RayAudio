@@ -37,6 +37,9 @@ namespace RayAudio
 		public static extern void RHPlaySound(UIntPtr sound);
 
 		[DllImport("raudio")]
+		public static extern void RHPlaySoundMulti(UIntPtr sound);
+
+		[DllImport("raudio")]
 		public static extern void RHStopSound(UIntPtr sound);
 
 		[DllImport("raudio")]
