@@ -40,3 +40,17 @@ void RHSetMusicVolume(Music* music, float volume) { SetMusicVolume(*music, volum
 void RHSetMusicPitch(Music* music, float pitch) { SetMusicPitch(*music, pitch); }
 float RHGetMusicTimeLength(Music* music) { return GetMusicTimeLength(*music); }
 float RHGetMusicTimePlayed(Music* music) { return GetMusicTimePlayed(*music); }
+
+
+/*** Extra functionality ***/
+
+bool EXVorbisSeek(Music* music, float secs) {
+	if (music->ctxType != MUSIC_AUDIO_OGG) return false;
+	stb_vorbis* ogg = (stb_vorbis*)music->ctxData;
+	stb_vorbis_info info = stb_vorbis_get_info(ogg);
+
+	stb_vorbis_seek(ogg, (unsigned int)(info.sample_rate * secs));
+	music->sampleLeft = music->sampleCount - (unsigned int)(info.sample_rate * info.channels * secs);
+
+	return true;
+}

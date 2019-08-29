@@ -92,5 +92,8 @@ namespace RayAudio
 
 		[DllImport("raudio")]
 		public static extern float RHGetMusicTimePlayed(UIntPtr music);
+
+		[DllImport("raudio")]
+		public static extern bool EXVorbisSeek(UIntPtr music, float secs);
 	}
 }

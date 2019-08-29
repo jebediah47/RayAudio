@@ -39,6 +39,11 @@ namespace RayAudio {
 			Native.RHUnloadMusicStream(NativePtr);
 		}
 
+		public void Seek(float secs) {
+			if (secs > Length) secs = Length;
+			if (!Native.EXVorbisSeek(NativePtr, secs)) throw new InvalidOperationException($"Can only seek OGG Vorbis streams.");
+		}
+
 		public bool IsPlaying {
 			get {
 				return Native.RHIsMusicPlaying(NativePtr);
